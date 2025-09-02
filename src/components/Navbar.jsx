@@ -1,10 +1,13 @@
 import { useContext, useEffect, useState } from "react";
-import { LanguageContext } from "../contexts/LanguageContext";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthContext";
+import { LanguageContext } from "../contexts/LanguageContext";
 import { ImageContainer } from "./ImageContainer";
 
 import logo from "../assets/logo.png";
+import { Container } from "./Container";
+import { Button } from "./UI/Button";
+import { LinkButton } from "./UI/LinkButton";
 
 const cn = (...classes) => classes.filter(Boolean).join(" ");
 
@@ -32,6 +35,7 @@ const BurgerButton = ({ openMobileNav, handleClick }) => {
                     top: "11px",
                     transform: openMobileNav ? "translateX(-20px)" : "translateX(0px)",
                     opacity: openMobileNav ? 0 : 1,
+                    transitionDuration: "0.5s",
                 }}
             />
             <span
@@ -72,18 +76,26 @@ const NavbarLinks = () => {
     ];
 
     return (
-        <ul className="flex flex-col gap-2 md:flex-row md:items-center md:gap-sm">
+        <ul className="flex flex-col gap-xs md:flex-row md:items-center md:gap-sm">
             {NAV_LINKS.map((link) => (
                 <li key={link.to}>
                     <NavLink to={link.to} className={(state) => getNavLinksClasses(state)}>
-                        {link.label}
+                        <p className="group relative w-max">
+                            <span>{link.label}</span>
+                            <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-gray-400 group-hover:w-full"></span>
+                        </p>
                     </NavLink>
                 </li>
             ))}
             {userActive?.id && (
                 <>
                     <li>
-                        <NavLink to={"/user"}>{getText("userNavLabel")}</NavLink>
+                        <NavLink to={"/user"}>
+                            <p className="group relative w-max">
+                                <span>{getText("userNavLabel")}</span>
+                                <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-white group-hover:w-full"></span>
+                            </p>
+                        </NavLink>
                     </li>
                 </>
             )}
@@ -95,6 +107,7 @@ export const NavBar = () => {
     const [openMobileNav, setOpenMobileNav] = useState(false);
     const { userActive, logout } = useContext(AuthContext);
     const { pathname } = useLocation();
+    const { getText } = useContext(LanguageContext);
 
     useEffect(() => {
         setOpenMobileNav(false);
@@ -103,45 +116,85 @@ export const NavBar = () => {
     const handleClick = () => setOpenMobileNav((prevValue) => !prevValue);
 
     return (
-        <nav className="flex flex-col py-2.5 px-5 bg-white border-b border-b-neutral-600">
-            <div className="flex items-center justify-between">
-                <Link to={"/"} className="text-xl font-bold">
-                    <ImageContainer className={"w-16"}>
-                        <img className="w-full" src={logo} alt="Logo" />
-                    </ImageContainer>
-                </Link>
+        <nav className={"border-b border-b-neutral-400 bg-white"}>
+            <Container className={`flex flex-col py-2.5 px-5 ${openMobileNav ? "gap-xs" : "gap-0"}`}>
+                <div className="flex items-center justify-between">
+                    <Link to={"/"} className="text-xl font-bold">
+                        <ImageContainer className={"w-16 md:w-20"}>
+                            <img className="w-full" src={logo} alt="Logo" />
+                        </ImageContainer>
+                    </Link>
 
-                <div className="hidden md:block">
-                    <NavbarLinks />
+                    <div className="hidden md:block">
+                        <NavbarLinks />
+                    </div>
+
+                    <div className="hidden md:flex md:items-center md:gap-2">
+                        {!userActive?.id && (
+                            <>
+                                <LinkButton to={"/register"} className={"active:bg-gray-200"}>
+                                    {getText("btnSignIn")}
+                                </LinkButton>
+                                <LinkButton to={"/login"} className={"bg-blue-500 active:bg-blue-700"}>
+                                    {getText("btnLogIn")}
+                                </LinkButton>
+                            </>
+                        )}
+                        {userActive?.id && (
+                            <Button
+                                className={"bg-blue-500 border-blue-500 hover:bg-blue-700"}
+                                onClick={logout}
+                            >
+                                {getText("btnLogOut")}
+                            </Button>
+                        )}
+                    </div>
+
+                    <BurgerButton openMobileNav={openMobileNav} handleClick={handleClick} />
                 </div>
 
-                <div className="hidden md:flex md:gap-2">
-                    {!userActive?.id && (
-                        <>
-                            <Link to={"/register"}>SIGN UP</Link>
-                            <Link to={"/login"}>LOG IN</Link>
-                        </>
+                <div
+                    id="mobile-nav"
+                    className={cn(
+                        "md:hidden",
+                        "md:h-0",
+                        openMobileNav ? "h-auto" : "h-0",
+                        `flex flex-col gap-sm overflow-y-hidden h-0`
                     )}
-                    {userActive?.id && <button onClick={logout}>LOG OUT</button>}
+                >
+                    <div className="flex">
+                        <NavbarLinks />
+                    </div>
+                    <div className="flex flex-col justify-center gap-sm">
+                        {!userActive?.id && (
+                            <>
+                                <LinkButton
+                                    to={"/register"}
+                                    className={"py-xs px-10 rounded-lg border elevation active:bg-gray-200"}
+                                >
+                                    {getText("btnSignIn")}
+                                </LinkButton>
+                                <LinkButton
+                                    to={"/login"}
+                                    className={
+                                        "py-xs px-10 rounded-lg border elevation bg-blue-500 active:bg-blue-700"
+                                    }
+                                >
+                                    {getText("btnLogIn")}
+                                </LinkButton>
+                            </>
+                        )}
+                        {userActive?.id && (
+                            <Button
+                                className={"bg-blue-500 border-blue-500 active:bg-blue-700"}
+                                onClick={logout}
+                            >
+                                {getText("btnLogOut")}
+                            </Button>
+                        )}
+                    </div>
                 </div>
-
-                <BurgerButton openMobileNav={openMobileNav} handleClick={handleClick} />
-            </div>
-
-            <div id="mobile-nav" className={cn("md:hidden", openMobileNav ? "block" : "hidden")}>
-                <div className="flex">
-                    <NavbarLinks />
-                </div>
-                <div className="flex flex-col bg-red-500">
-                    {!userActive?.id && (
-                        <>
-                            <Link to={"/register"}>SIGN UP</Link>
-                            <Link to={"/login"}>LOG IN</Link>
-                        </>
-                    )}
-                    {userActive?.id && <button onClick={logout}>LOG OUT</button>}
-                </div>
-            </div>
+            </Container>
         </nav>
     );
 };

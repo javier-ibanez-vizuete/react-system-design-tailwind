@@ -16,7 +16,7 @@ body {
 }
 
 @theme {
-    --font-sans: "Plus Jakarta Sans", sans-serif;
+    --font-sans: "DM Sans", sans-serif;
 
     --text-h1: 72px;
     --text-h2: 60px;
@@ -47,29 +47,30 @@ body {
 }
 
 h1 {
-    @apply font-sans font-semibold text-h1/[88px];
+    @apply font-sans font-semibold text-h1/[88px] text-gray-900;
 }
 h2 {
-    @apply font-sans font-semibold text-h2/[72px];
+    @apply font-sans font-semibold text-h2/[72px] text-gray-900;
 }
 h3 {
-    @apply font-sans font-semibold text-h3/[60px];
+    @apply font-sans font-semibold text-h3/[60px] text-gray-900;
 }
 h4 {
-    @apply font-sans font-semibold text-h4/[44px];
+    @apply font-sans font-semibold text-h4/[44px] text-gray-900;
 }
 h5 {
-    @apply font-sans font-semibold text-h5/[30px];
+    @apply font-sans font-semibold text-h5/[30px] text-gray-900;
 }
 h6 {
-    @apply font-sans font-semibold text-h6/[24px];
+    @apply font-sans font-semibold text-h6/[24px] text-gray-900;
 }
 
-p {
-    @apply font-sans text-base/[150%] font-normal;
+p,
+a {
+    @apply font-sans text-base/[150%] font-normal text-gray-400;
 }
 
-.elevantion {
+.elevation {
     @apply hover:translate-y-[-4px] transition;
 }
 
