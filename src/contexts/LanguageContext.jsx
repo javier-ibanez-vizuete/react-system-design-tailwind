@@ -34,6 +34,14 @@ export const LanguageProvider = ({ children }) => {
             btnSignIn: "Sign In",
             btnLogIn: "Log In",
             btnLogOut: "Log Out",
+            btnGetStart: "Get Start",
+            btnWatchDemo: "Watch Demo",
+
+            CTAFirstSectionTitle1: "Make Your First",
+            CTAFirstSectionTitle2: "Count",
+            CTAFirstSectionSpanTitle: "Impression",
+            CTAFirstSectionText:
+                "powerful seal-serve product analytics to help you convert engage and retain more users",
         },
 
         es: {},
