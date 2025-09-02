@@ -3,66 +3,92 @@
 html,
 body,
 #root {
-	height: 100%;
+    height: 100%;
 }
 
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-	margin: 0;
-	font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
 }
 
 @theme {
-	--font-title: ;
-	--font-sans: ;
+    --font-sans: "Plus Jakarta Sans", sans-serif;
 
-	--text-h1: ;
-	--text-h2: ;
-	--text-h3: ;
-	--text-h4: ;
-	--text-h5: ;
-	--text-h6: ;
+    --text-h1: 72px;
+    --text-h2: 60px;
+    --text-h3: 48px;
+    --text-h4: 36px;
+    --text-h5: 30px;
+    --text-h6: 24px;
 
-	/* 🎨 Color primario */
-	--color-primary: ;
-	--color-primary-hover: ;
-	--color-primary-pressed: ;
+    --text-xl: 20px;
+    --text-lg: 18px;
+    --text-md: 16px;
+    --text-sm: 14px;
+    --text-xs: 12px;
 
-	--spacing-xs: ;
-	--spacing-sm: ;
-	--spacing-md: ;
-	--spacing-lg: ;
-	--spacing-xl: ;
-	--spacing-2xl: ;
-	--spacing-3xl: ;
+    /* 🎨 Base */
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    /* 📏 Espaciado */
+	--spacing-2xs: 16px;
+    --spacing-xs: 23px;
+    --spacing-sm: 30px;
+    --spacing-md: 52px;
+    --spacing-lg: 65px;
+    --spacing-xl: 86px;
+    --spacing-2xl: 96px;
+    --spacing-3xl: 150px;
 }
 
-/* h1 {
-	@apply font-title font-semibold text-h1/[125%];
+h1 {
+    @apply font-sans font-semibold text-h1/[88px];
 }
 h2 {
-	@apply font-title font-semibold text-h2/[125%];
+    @apply font-sans font-semibold text-h2/[72px];
 }
 h3 {
-	@apply font-title font-semibold text-h3/[125%];
+    @apply font-sans font-semibold text-h3/[60px];
 }
 h4 {
-	@apply font-title font-semibold text-h4/[125%];
+    @apply font-sans font-semibold text-h4/[44px];
 }
 h5 {
-	@apply font-title font-semibold text-h5/[125%];
+    @apply font-sans font-semibold text-h5/[30px];
 }
 h6 {
-	@apply font-title font-semibold text-h6/[125%];
+    @apply font-sans font-semibold text-h6/[24px];
 }
 
 p {
-	@apply font-sans text-base/[150%] font-normal;
+    @apply font-sans text-base/[150%] font-normal;
 }
 
 .elevantion {
-	@apply hover:translate-y-[-4px] transition;
-} */
+    @apply hover:translate-y-[-4px] transition;
+}
+
+.text-xl {
+    @apply text-xl/[30px];
+}
+
+.text-lg {
+    @apply text-lg/[28px];
+}
+
+.text-md {
+    @apply text-md/[24px];
+}
+
+.text-sm {
+    @apply text-sm/[20px];
+}
+
+.text-xs {
+    @apply text-xs/[18px];
+}
