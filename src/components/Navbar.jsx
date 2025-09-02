@@ -132,19 +132,16 @@ export const NavBar = () => {
                     <div className="hidden md:flex md:items-center md:gap-2">
                         {!userActive?.id && (
                             <>
-                                <LinkButton to={"/register"} className={"active:bg-gray-200"}>
+                                <LinkButton to={"/register"} className={"secondary-btn"}>
                                     {getText("btnSignIn")}
                                 </LinkButton>
-                                <LinkButton to={"/login"} className={"bg-blue-500 active:bg-blue-700"}>
+                                <LinkButton to={"/login"} className={"primary-btn"}>
                                     {getText("btnLogIn")}
                                 </LinkButton>
                             </>
                         )}
                         {userActive?.id && (
-                            <Button
-                                className={"bg-blue-500 border-blue-500 hover:bg-blue-700"}
-                                onClick={logout}
-                            >
+                            <Button className={"primary-btn"} onClick={logout}>
                                 {getText("btnLogOut")}
                             </Button>
                         )}
@@ -168,18 +165,10 @@ export const NavBar = () => {
                     <div className="flex flex-col justify-center gap-sm">
                         {!userActive?.id && (
                             <>
-                                <LinkButton
-                                    to={"/register"}
-                                    className={"py-xs px-10 rounded-lg border elevation active:bg-gray-200"}
-                                >
+                                <LinkButton to={"/register"} className={"secondary-btn"}>
                                     {getText("btnSignIn")}
                                 </LinkButton>
-                                <LinkButton
-                                    to={"/login"}
-                                    className={
-                                        "py-xs px-10 rounded-lg border elevation bg-blue-500 active:bg-blue-700"
-                                    }
-                                >
+                                <LinkButton to={"/login"} className={"primary-btn"}>
                                     {getText("btnLogIn")}
                                 </LinkButton>
                             </>

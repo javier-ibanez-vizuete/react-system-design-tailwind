@@ -5,7 +5,7 @@ export const MainLayout = ({ children }) => {
     return (
         <div className="flex flex-col h-full">
             <NavBar />
-            <main className="flex-1 flex flex-col bg-red-300 p-7">{children}</main>
+            <main className="flex-1 flex flex-col bg-white">{children}</main>
             <Footer />
         </div>
     );
