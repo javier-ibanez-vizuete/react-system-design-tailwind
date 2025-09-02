@@ -3,7 +3,7 @@ import { AppRouter } from "./routes/AppRouter";
 
 export const App = () => {
 	return (
-		<MainLayout className={"text-slate"}>
+		<MainLayout>
 			<AppRouter />
 		</MainLayout>
 	);
