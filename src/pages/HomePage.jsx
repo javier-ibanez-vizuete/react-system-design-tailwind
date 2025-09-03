@@ -1,14 +1,17 @@
-import { useContext } from "react";
-import { LanguageContext } from "../contexts/LanguageContext";
+import { Hero } from "../components/Hero";
+import { BrandsSection } from "../Sections/BrandsSection";
 import { CTAFirstSection } from "../Sections/CTAFirstSection";
+import { CTASecondSection } from "../Sections/CTASecondSection";
+import { FeaturesSection } from "../Sections/FeaturesSection";
 
 export const HomePage = () => {
-    const { getText } = useContext(LanguageContext);
-
     return (
-        <div>
+        <div className="flex flex-col flex-1 text-center">
             <CTAFirstSection />
-            <div className="bg-blue-700">hola</div>
+            <Hero />
+            <BrandsSection />
+            <FeaturesSection />
+            <CTASecondSection />
         </div>
     );
 };
