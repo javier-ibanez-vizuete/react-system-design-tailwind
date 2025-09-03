@@ -119,7 +119,7 @@ export const NavBar = () => {
         <nav className={"border-b border-b-neutral-400 bg-white"}>
             <Container className={`flex flex-col py-2.5 px-5 ${openMobileNav ? "gap-xs" : "gap-0"}`}>
                 <div className="flex items-center justify-between">
-                    <Link to={"/"} className="text-xl font-bold">
+                    <Link to={"/"} className="text-xl font-bold zooming">
                         <ImageContainer className={"w-16 md:w-20"}>
                             <img className="w-full" src={logo} alt="Logo" />
                         </ImageContainer>

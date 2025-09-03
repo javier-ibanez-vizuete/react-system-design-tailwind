@@ -39,6 +39,8 @@ export const LanguageProvider = ({ children }) => {
             btnLogOut: "Log Out",
             btnGetStart: "Get Start",
             btnWatchDemo: "Watch Demo",
+            btnGetStarted: "Get Started",
+            btnRequestDemo: "Request a Demo",
 
             CTAFirstSectionTitle1: "Make Your First",
             CTAFirstSectionTitle2: "Count",
@@ -65,6 +67,9 @@ export const LanguageProvider = ({ children }) => {
                 "Identify changes and market shifts in real time to stay one step ahead with reliable forecasts and actionable insights.",
             featureSectionContent6:
                 "Empower your strategies with advanced statistics that turn analysis into action and deliver measurable business impact.",
+
+            CTASecondSectionTitle: "Create Your First Personalized",
+            CTASecondSectionContent: "No credit card required 7 days free trial",
 
             noTextFound: "No text Found",
         },

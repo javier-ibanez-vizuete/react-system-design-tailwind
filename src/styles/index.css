@@ -36,6 +36,7 @@ body {
     --color-black: #000000;
 
     /* 📏 Espaciado */
+    --spacing-4xs: 12px;
     --spacing-2xs: 16px;
     --spacing-xs: 23px;
     --spacing-sm: 30px;
@@ -67,11 +68,15 @@ h6 {
 
 p,
 a {
-    @apply font-sans text-base/[150%] font-normal text-gray-400;
+    @apply font-sans font-normal text-gray-400;
 }
 
 .elevation {
     @apply hover:translate-y-[-4px] transition;
+}
+
+.zooming {
+    @apply hover:transform hover:scale-105 transition;
 }
 
 .text-xl {
@@ -91,7 +96,7 @@ a {
 }
 
 .text-xs {
-    @apply text-xs/[18px];
+    @apply text-xs/[14px];
 }
 
 .primary-btn {

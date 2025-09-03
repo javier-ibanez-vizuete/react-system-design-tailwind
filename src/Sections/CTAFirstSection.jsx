@@ -7,7 +7,7 @@ export const CTAFirstSection = () => {
     const { getText } = useContext(LanguageContext);
 
     return (
-        <SectionContainer className="flex flex-col gap-sm text-center">
+        <SectionContainer className="flex flex-col gap-sm">
             <h2>
                 {getText("CTAFirstSectionTitle1")}
                 <span className="text-blue-500run de"> {getText("CTAFirstSectionSpanTitle")} </span>
@@ -15,7 +15,7 @@ export const CTAFirstSection = () => {
             </h2>
             <p>{getText("CTAFirstSectionText")}</p>
             <div className="flex items-center justify-center gap-2xs">
-                <LinkButton className={"px-xs primary-btn"} to={"/register"}>
+                <LinkButton className={"primary-btn"} to={"/register"}>
                     {getText("btnGetStart")}
                 </LinkButton>
                 <LinkButton className={"px-xs secondary-btn"} to={"/demo"}>
