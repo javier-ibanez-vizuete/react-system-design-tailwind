@@ -3,6 +3,7 @@ import { Hero } from "../components/Hero";
 import { LanguageContext } from "../contexts/LanguageContext";
 import { BrandsSection } from "../Sections/BrandsSection";
 import { CTAFirstSection } from "../Sections/CTAFirstSection";
+import { FeaturesSection } from "../Sections/FeaturesSection";
 
 export const HomePage = () => {
     const { getText } = useContext(LanguageContext);
@@ -12,6 +13,7 @@ export const HomePage = () => {
             <CTAFirstSection />
             <Hero />
             <BrandsSection />
+            <FeaturesSection />
         </div>
     );
 };
