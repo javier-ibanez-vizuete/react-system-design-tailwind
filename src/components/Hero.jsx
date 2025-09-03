@@ -5,7 +5,7 @@ import heroImage from "../assets/pictures/home-page/image-preview.png";
 
 export const Hero = () => {
     return (
-        <div className="">
+        <div className="py-lg">
             <Container>
                 <ImageContainer>
                     <img className="w-full -ml-4 object-cover md:-ml-10" src={heroImage} alt="Hero Image" />

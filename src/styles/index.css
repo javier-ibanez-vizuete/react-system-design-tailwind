@@ -47,22 +47,22 @@ body {
 }
 
 h1 {
-    @apply font-sans font-semibold text-display-md/[44px] md:text-display-xl/[72px] text-gray-900;
+    @apply font-sans font-semibold text-display-md/[44px] md:text-display-xl/[72px];
 }
 h2 {
-    @apply font-sans font-semibold text-display-md/[44px] md:text-display-xl/[72px] text-gray-900;
+    @apply font-sans font-semibold text-display-md/[44px] md:text-display-xl/[72px];
 }
 h3 {
-    @apply font-sans font-semibold text-display-md/[44px] md:text-display-xl/[72px] text-gray-900;
+    @apply font-sans font-semibold text-display-md/[44px] md:text-display-xl/[72px];
 }
 h4 {
-    @apply font-sans font-semibold text-display-md/[44px] md:text-display-xl/[72px] text-gray-900;
+    @apply font-sans font-semibold text-display-md/[44px] md:text-display-xl/[72px];
 }
 h5 {
-    @apply font-sans font-semibold text-display-md/[44px] md:text-display-xl/[72px] text-gray-900;
+    @apply font-sans font-semibold text-display-md/[44px] md:text-display-xl/[72px];
 }
 h6 {
-    @apply font-sans font-semibold text-display-md/[44px] md:text-display-xl/[72px] text-gray-900;
+    @apply font-sans font-semibold text-display-md/[44px] md:text-display-xl/[72px];
 }
 
 p,
