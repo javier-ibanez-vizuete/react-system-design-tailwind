@@ -10,7 +10,7 @@ export const CTAFirstSection = () => {
         <SectionContainer className="flex flex-col gap-sm text-center">
             <h2>
                 {getText("CTAFirstSectionTitle1")}
-                <span className="text-blue-500"> {getText("CTAFirstSectionSpanTitle")} </span>
+                <span className="text-blue-500run de"> {getText("CTAFirstSectionSpanTitle")} </span>
                 {getText("CTAFirstSectionTitle2")}
             </h2>
             <p>{getText("CTAFirstSectionText")}</p>
