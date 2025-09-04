@@ -34,6 +34,8 @@ export const LanguageProvider = ({ children }) => {
             featuresPageNavLabel: "Features",
             pricingPageNavLabel: "Pricing",
 
+            languagesLabelName: "Language",
+
             btnSignIn: "Sign In",
             btnLogIn: "Log In",
             btnLogOut: "Log Out",
