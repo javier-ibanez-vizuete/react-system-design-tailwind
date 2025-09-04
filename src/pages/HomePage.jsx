@@ -3,6 +3,7 @@ import { BrandsSection } from "../Sections/BrandsSection";
 import { CTAFirstSection } from "../Sections/CTAFirstSection";
 import { CTASecondSection } from "../Sections/CTASecondSection";
 import { FeaturesSection } from "../Sections/FeaturesSection";
+import { ProtocolSection } from "../Sections/ProtocolSection";
 
 export const HomePage = () => {
     return (
@@ -12,6 +13,7 @@ export const HomePage = () => {
             <BrandsSection />
             <FeaturesSection />
             <CTASecondSection />
+            <ProtocolSection />
         </div>
     );
 };
