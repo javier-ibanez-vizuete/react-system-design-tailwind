@@ -1,3 +1,5 @@
+import { ImageContainer } from "./ImageContainer";
+
 export const ProtocolCard = ({ title = "", content = "", imgSize = "", img = "", direction = "" }) => {
     return (
         <article className={`flex gap-5 md:gap-6 flex-col items-center ${direction ? direction : ""}`}>
@@ -6,9 +8,12 @@ export const ProtocolCard = ({ title = "", content = "", imgSize = "", img = "",
                 <p className="text-md">{content}</p>
             </div>
             {img && (
-                <picture className={`flex justify-center items-center ${imgSize ? imgSize : ""}`}>
+                <ImageContainer className={imgSize}>
                     <img className={`w-full`} src={img} alt={`Image of ${title}`} />
-                </picture>
+                </ImageContainer>
+                // <picture className={`flex justify-center items-center ${imgSize ? imgSize : ""}`}>
+                // <img className={`w-full`} src={img} alt={`Image of ${title}`} />
+                // </picture>
             )}
         </article>
     );

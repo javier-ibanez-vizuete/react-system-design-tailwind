@@ -41,6 +41,7 @@ export const LanguageProvider = ({ children }) => {
             btnWatchDemo: "Watch Demo",
             btnGetStarted: "Get Started",
             btnRequestDemo: "Request a Demo",
+            btnTryIt: "Try it for Free",
 
             CTAFirstSectionTitle1: "Make Your First",
             CTAFirstSectionTitle2: "Count",
@@ -70,6 +71,23 @@ export const LanguageProvider = ({ children }) => {
 
             CTASecondSectionTitle: "Create Your First Personalized",
             CTASecondSectionContent: "No credit card required 7 days free trial",
+
+            protocolSectionTitle1: "Make the best hire in half the time",
+            protocolSectionTitle2: "Streamline your recruitment process",
+            protocolSectionTitle3: "Improve candidate experience",
+            protocolSectionTitle4: "Data-driven hiring decisions",
+            protocolSectionContent1:
+                "Move faster on a recruiting platform that automates manual tasks like scheduling interviews and getting approvals.",
+            protocolSectionContent2:
+                "Centralize candidate data, simplify workflows, and collaborate with your team in real time.",
+            protocolSectionContent3:
+                "Offer a smooth and professional journey with automated communication and personalized touchpoints.",
+            protocolSectionContent4:
+                "Use analytics and reporting tools to optimize your recruitment strategy and reduce time-to-hire.",
+
+            CTAThirdSectionTitle: "Let's grow together",
+            CTAThirdSectioncontent:
+                "Explore out full hiring platform with 15 days free trial no credit card.Post jobs get candidates and manage applicants all in one.",
 
             noTextFound: "No text Found",
         },
