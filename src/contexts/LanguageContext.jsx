@@ -89,6 +89,21 @@ export const LanguageProvider = ({ children }) => {
             CTAThirdSectioncontent:
                 "Explore out full hiring platform with 15 days free trial no credit card.Post jobs get candidates and manage applicants all in one.",
 
+            faqSectionTitle0: "Frequently asked question",
+            faqSectionTitle1: "Is there a free trial available?",
+            faqSectionTitle2: "How does billing and pricing work?",
+            faqSectionTitle3: "Can I cancel my subscription?",
+            faqSectionTitle4: "What support options are available?",
+            faqSectionContent0: "Everything you need to know aboyt jahedin",
+            faqSectionContent1:
+                "Yes — we offer a 14-day free trial with full access to all features. No credit card required, and you can upgrade at any time without losing your data.",
+            faqSectionContent2:
+                "We provide monthly and annual plans. Annual subscriptions include a discount (typically ~20%). Billing occurs at the start of each period and you can change plans from your account settings; prorated adjustments may apply when switching.",
+            faqSectionContent3:
+                "Yes — you can cancel anytime from your account. Cancellation stops future charges immediately but you will keep access until the end of the current paid period. There are no reactivation fees if you decide to come back.",
+            faqSectionContent4:
+                "Support includes email (response within 24 business hours), live chat for paid plans, and a searchable help center with guides and tutorials to solve common issues quickly.",
+
             noTextFound: "No text Found",
         },
 
