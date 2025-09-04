@@ -48,9 +48,9 @@ export const FeaturesSection = () => {
     return (
         <SectionContainer>
             <header className="flex flex-col gap-5 mb-10 md:mb-14">
-                <span className="text-blue-500">Feature</span>
-                <h2>You will never missed a deadline</h2>
-                <p>Connect expose and visualize and over 150 Sass tools without engineering method</p>
+                <span className="text-blue-500">{getText("featureSectionCategoryName")}</span>
+                <h2>{getText("featureSectionTitle0")}</h2>
+                <p>{getText("featureSectionContent0")}</p>
             </header>
             <ul className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-14 lg:grid-cols-3">
                 {FeaturesData.map((data) => {
