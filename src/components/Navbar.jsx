@@ -116,7 +116,7 @@ export const NavBar = () => {
     const handleClick = () => setOpenMobileNav((prevValue) => !prevValue);
 
     return (
-        <nav className={"border-b border-b-neutral-400 bg-white"}>
+        <nav className={"bg-white"}>
             <Container className={`flex flex-col py-2.5 px-5 ${openMobileNav ? "gap-xs" : "gap-0"}`}>
                 <div className="flex items-center justify-between">
                     <Link to={"/"} className="text-xl font-bold zooming">
